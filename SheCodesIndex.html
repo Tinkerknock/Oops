@@ -18,6 +18,7 @@
       h2 {
         color: #272044;
         text-align: center;
+        font-weight: normal;
       }
       .button {
         display: block;
@@ -34,6 +35,17 @@
       .button:hover {
         background-color:#885df1
       }
+      .horizontal-list {
+        list-style-type: none;
+        display:block;
+        padding: 0;
+        text-align: center;
+      }
+.horizontal-list li {
+  display: inline;
+  margin-right: 20px
+}
+      
       .coders {
         color: pink;
       }
@@ -50,40 +62,55 @@
         display: block;
         margin: 0 auto;
       }
+      .contact-details {
+        text-align: center;
+        font-size: smaller;
+      }
+      .email {
+        color:#885df1; 
+      }
+      .instagram {
+        color:#885df1;
+      }
+
     </style>
   </head>
   <body>
-    <h1>SheCodes</h1>
-
-    <h2>Coding Workshop</h2>
-
-    <button class="button">Apply now!</button class>
+    <h1>SheCodes
+    </h1>
+    <h2>Coding Workshop
+    </h2>
+  <button class="button">Apply now!</button class>
+    <div class="horizontal-list">
     <ul>
       <li>
         <a
           href="https://www.shecodes.io/students"
           target="_blank"
-          title="Coders"
-          ><span class="coders links">Coders</span></a
-        >
-      </li>
+          class="coders"
+          title="coders"
+          >Coders</a>
+       </li>
       <li>
         <a
           href="https://www.shecodes.io/workshops"
           target="_blank"
-          title="Courses"
-          ><span class="courses links">Courses</span></a
+          class="courses"
+          title="courses"
+          >Courses</a
         >
       </li>
       <li>
         <a
           href="https://www.shecodes.io/stories"
           target="_blank"
-          title="Stories"
-          ><span class="stories links">Stories</span></a
+          class="stories"
+          title="stories"
+          >Stories</a
         >
       </li>
     </ul>
+    </div>
     <hr />
     <br />
     <h2>More info</h2>
@@ -93,5 +120,12 @@
       alt="Happy coder"
       width="400"
     />
+    <br />
+    <div class="contact-details">
+      <span class="email">Email:</span>
+      <span class="email-address">hello@shecodes.io</span>
+      <span class="instagram">Instagram:</span>
+      <span class="instagram-handle">@shecodes.io</span>
+    </div>
   </body>
 </html>
