@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework-Week1</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #1a64d6;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+      }
+      .temperature-list {
+        text-align:center;
+      }
+      li {
+        text-align: center;
+        list-style-type: none;
+        font-family: Arial, Helvetica, sans-serif;
+        list-style: none;
+        text-align: center;
+
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 10px;
+        padding-left: 0%;
+      }
+      .tomorrow:hover {
+        background-color: rgba(255, 243, 15, 0.1);
+      }
+      .saturday:hover {
+        background-color: rgba(255, 243, 15, 0.1);
+      }
+      .sunday:hover {
+        background-color: rgba(255, 243, 15, 0.1);
+      }
+      .button {
+        color: #ffffff;
+        text-align: center;
+        display: block;
+        background-color: #1a64d6;
+        margin: 30px auto;
+        padding: 15px 20px 15px 20px;
+        text-align: center;
+        border: 1px solid #1a64d6;
+        border-radius: 50px;
+        box-shadow: 3px 3px 3px 3px lightgrey;
+        transition: all 200ms ease-in-out;
+      }
+      .button:hover {
+        background-color: transparent;
+        color: #1a64d6;
+      }
+      p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      🌥
+      <br />
+      Currently 21° in Tokyo
+    </h1>
+    <h2>13° / <strong>23°</strong></h2>
+    <div class="temperature-list"
+    <ul>
+      <li class="tomorrow">
+        <h3>🌧Tomorrow</h3>
+        <p>10° / <strong>22°</strong></p>
+      </li>
+      <li class="saturday">
+        <h3>⛅Saturday</h3>
+        <p>15° / <strong>17°</strong></p>
+      </li>
+      <li class="sunday">
+        <h3>☀Sunday</h3>
+        <p>25° / <strong>28°</strong></p>
+      </li>
+    </ul>
+</div>
+
+    <button class="button">Change City</button>
+
+    <p>Coded by Savannah Storm</p>
+  </body>
+</html>
