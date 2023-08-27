@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauras Koreiva</title>
+  </head>
+  <style>
+    body {
+      background-color: #e6f2ff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: left;
+    }
+
+    h1 {
+      margin: 20px 10px;
+      padding: 20px 10px;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .taurasimage {
+      margin: 0px;
+      border: 5px solid #ffffff;
+      border-radius: 20px;
+    }
+
+    hr {
+      background-color: black;
+      height: 10px;
+    }
+
+    .textbox {
+      background-color: #e6f2ff;
+      margin: 10px;
+      border: 5px solid #ffffff;
+      padding: 10px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .maintext {
+      margin: 10px;
+      padding: 10px;
+      font-size: large;
+      font-weight: 200;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      line-height: normal;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    .artstation {
+      background-color: blue;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: ;
+    }
+
+    .linkedin {
+      background-color: blue;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="logo">
+      <img
+        src="https://shorturl.at/norCS"
+        alt="Tauras Koreiva LinkedIn Headshot"
+        width="150"
+        class="taurasimage"
+      />
+      <h1>
+        Tauras Koreiva
+        <br />
+        3D Environment Artist
+      </h1>
+    </div>
+
+    <hr />
+    <br />
+
+    <div class="textbox">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/094/832/original/tauras-koreiva-blueconnector-tk-01.jpg?1693129468"
+        alt="Portfolio image of 3D orange HotWheels track with blue connectors"
+        width="850"
+        ;
+        class="hotwheels"
+        ;
+      />
+      <div class="welcome">
+        <h2>Hello visitor, welcome.</h2>
+      </div>
+
+      <div class="maintext">
+        <em
+          >Tauras Koreiva is a 3D Environment Artist living in Nottingham,
+          England.</em
+        >
+        <br />
+        <p>
+          He currently works for <strong>Criterion Games</strong> as a World
+          Artist II, although previous roles have included 3D Environment Artist
+          roles at <strong>XR Games</strong>, <strong>Playground Games</strong>,
+          and <strong>Sumo Digital</strong>. <br />
+        </p>
+
+        <p>
+          He specialises in asset creation and scene composition, but also
+          enjoys contributing to art direction, mentoring juniors, and
+          troubleshooting.
+        </p>
+
+        <p>
+          <span class="softwares">Softwares Used:</span>
+          <br />
+          3DS Max. Maya. ZBrush. Substance Painter. Unity.
+        </p>
+      </div>
+    </div>
+    <br />
+
+    <div class="buttons">
+      <button class="artstation" onclick="gotoArtStation ()">ArtStation</button>
+      <button class="linkedin" onclick="gotoLinkedin ()">LinkedIn</button>
+    </div>
+    <br />
+
+    <button onclick="siteTheme()">Change site theme?</button>
+    <em>Coded with love by</em
+    ><a href="https://www.linkedin.com/in/savannahstorm/"> Savannah Storm</a>.
+    💗
+    <script>
+
+
+      function changeWelcome() {
+        let visitorname = prompt("Hello visitor, what's your name?");
+        let return = prompt("Is this your first time on this page?")
+
+        let welcome = document.querySelector("welcome");
+
+        if (return = yes) {
+          welcome.innerHTML = `Hello ${visitorname}, welcome.`;
+        } else {
+          welcome.innerHTML = `Hello ${visitorname}, welcome back.`;
+        }
+      }
+
+      function gotoArtStation () {
+        window.location.href="https://www.artstation.com/taurask"
+      }
+
+      function gotoLinkedin () {
+        window.location.href="https://www.linkedin.com/in/taurask/"
+      }
+
+
+
+      function siteTheme () {
+        let element = document.body;
+        element.classList.toggle("dark");
+      }
+
+      let siteThemeButton = document.querySelector("siteTheme");
+
+      siteThemeButton.addEventListener("click", siteTheme);
+    </script>
+  </body>
+</html>
