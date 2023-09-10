@@ -8,7 +8,8 @@
   <style>
     /* margin, padding, font-size, font-weight, color, background (with linear-gradient), line-height, box-shadow, border, transition */
     body {
-      font-family: Helvetica;
+      font-family: 'Courier New', Courier, monospace;
+      
       margin: 0;
       background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/970/original/tauras-koreiva-tauraskoreiva-rockface-03.jpg?1694004164");
     }
@@ -21,6 +22,7 @@
       padding: 0.5em 1em;
       background-color: #473a33;
       color: #9fc5f9;
+      font-family: 'Courier New', Courier, monospace;
     }
 
     .site-header::after {
@@ -61,6 +63,57 @@
       margin: 1.4em 1em 1em 1em;
       color: #9fc5f9;
     }
+
+    .maintext {
+      margin: 50px 50px 10px 50px;
+      padding: 10px;
+      background-color: aliceblue;
+      border: 4px solid #9fc5f9;
+    }
+    .container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+    }
+    .column {
+      float: left;
+      width: 26%;
+      padding: 1px;
+      margin: 3px;
+    }
+    img {
+      width: 100%;
+    }
+    .maintext {
+      display: inline-block;
+      text-align: center;
+    }
+    button {
+        border-radius: 25px;
+        margin: 0 auto;
+        display: block;
+        background-color: aliceblue;
+        border: 4px solid #9fc5f9;
+        color: #473a33;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+      }
+      button:hover {
+        color: #9fc5f9;
+        background: #473a33;
+      }
+      .external {
+        font-weight: bold;
+      }
+      .credit {
+        background-color: aliceblue;
+        text-align: center;
+      }
   </style>
   <body>
     <!-- /* h1, h2, p, div, span, strong, em, br, hr */ -->
@@ -68,6 +121,10 @@
     <header class="site-header">
       <div class="site-identity">
         <h1>Tauras Koreiva</h1>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/981/original/tauras.jpg?1694006836"
+          alt="Tauras Koreiva"
+        />
       </div>
       <nav class="site-navigation">
         <ul class="nav">
@@ -76,19 +133,93 @@
         </ul>
       </nav>
     </header>
+    <div class="maintext">
+      <p><h3>🎮</h3></p>
+      <span class="h2">
+        <h2>
+          Tauras Koreiva is a 3D Environment Artist living in Nottingham,
+          England.
+        </h2></span>
 
-    <div class="image">
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/981/original/tauras.jpg?1694006836"
-        ;
-        alt="tauras image"
-        ;
-        width="300px;"
-      />
+      
+      <hr />
+      <br />
+      <p>
+        He currently works for <strong>Criterion Games</strong> as a World
+        Artist II, although previous roles have included Senior Environment
+        Artist at <strong>XR Games</strong>, Asset Artist at
+        <strong>Playground Games</strong>, and Environment Generalist at
+        <strong>Sumo Digital</strong>. <br />
+      </p>
+
+      <p>
+        He specialises in asset creation and scene composition, but also enjoys
+        contributing to art direction, mentoring juniors, and troubleshooting.
+      </p>
+      <p>
+        He's worked on critically acclaimed first party XBOX game Forza Horizon
+        5, but has also shipped other titles such as Team Sonic Racing.
+      </p>
+      <p>
+        <strong>Softwares Used:</strong>
+        <br />
+        3DS Max. Maya. ZBrush. Substance Painter. Unreal Engine. Blender.
+        Substance Designer. Marmoset Toolbag.
+      </p>
+      <p>
+        <br />
+       <span class ="external">Outside of work, he enjoys sim racing, 3D modelling and printing, and
+        tolerating his girlfriend Savannah.</span>
+      </p>
+
+      
     </div>
-    <div class="textbox"><input type="text" placeholder="images" /></div>
+    <div class="container">
+      <div class="column">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/094/832/original/tauras-koreiva-blueconnector-tk-01.jpg?1693129468"
+          alt="image1"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/543/original/tauras-koreiva-02-tauras-k-in-game-guanajuato-05.jpg?1694374736"
+          alt="image1"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/544/original/tauras-koreiva-tk-hw-blue-decal-03.jpg?1694374857"
+          alt="image1"
+        />
+      </div>
+    </div>
+    <button>Become a fan?</button>
+    <br />
+    <div class ="credit"><em>Coded with love by</em
+      ><a href="https://www.linkedin.com/in/savannahstorm/"> Savannah Storm</a>.
+      💗</div>
   </body>
   <script>
     /* let, if, else, alert, prompt, event */
+    alert ("Welcome!")
+
+    function becomeFan() {
+      let name = prompt("What is your name?");
+      let age = prompt("How old are you?");
+
+      let h3 = document.querySelector("h3");
+
+      if (age > 18) {
+        h3.innerHTML = "Hi " + name + "! You're now a fan.";
+      } else {
+        if (age < 18)
+          h3.innerHTML = "Sorry " + name + "! You're too young to be a fan.";
+      }
+    }
+
+    let contactButton = document.querySelector("button");
+
+    contactButton.addEventListener("click", becomeFan);
   </script>
 </html>
