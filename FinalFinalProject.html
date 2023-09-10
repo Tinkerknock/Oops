@@ -106,7 +106,7 @@ justify-content: center;
         transition: all 200ms ease;
         font-family: 'Courier New', Courier, monospace;
         font-weight: bolder;
-       
+       cursor: pointer;
       }
       button:hover {
         color: #9fc5f9;
@@ -119,6 +119,22 @@ justify-content: center;
         background-color: aliceblue;
         text-align: center;
       }
+
+      ul.softwares li {
+        display: inline-block;
+        list-style-type: none;
+        
+      } 
+      ul li:not(:first-child):before { content: "| " }
+     
+      li {
+        display: inline-block;
+        list-style-type: none;  
+        color:#473a33;
+
+      }
+
+      
   </style>
   <body>
     <!-- /* h1, h2, p, div, span, strong, em, br, hr */ -->
@@ -168,8 +184,16 @@ justify-content: center;
       <p>
         <strong>Softwares Used:</strong>
         <br />
-        3DS Max. Maya. ZBrush. Substance Painter. Unreal Engine. Blender.
-        Substance Designer. Marmoset Toolbag.
+        <ul class="softwares">
+        <li>3DS Max</li> 
+        <li>Maya</li> 
+        <li>ZBrush</li> 
+        <li>Substance Painter</li>
+        <li> Unreal Engine</li> 
+        <li>Blender</li>
+        <li>Substance Designer</li>
+        <li>Marmoset Toolbag</li> 
+      </ul>
       </p>
       <p>
         <br />
@@ -207,19 +231,18 @@ justify-content: center;
   </body>
   <script>
     /* let, if, else, alert, prompt, event */
-    alert ("Welcome!")
-
+  
     function becomeFan() {
       let name = prompt("What is your name?");
       let age = prompt("How old are you?");
 
       let h3 = document.querySelector("h3");
 
-      if (age > 18) {
-        h3.innerHTML = "Hi " + name + "! You're now a fan.";
+      if (age >= 18) {
+        h3.innerHTML = "Hi " + name + "! You're now a fan. 🤎";
       } else {
-        if (age < 18)
-          h3.innerHTML = "Sorry " + name + "! You're too young to be a fan.";
+        alert("Sorry " + name + "! You're too young to be a fan.");
+          // h3.innerHTML = "Sorry " + name + "! You're too young to be a fan.";
       }
     }
 
