@@ -125,7 +125,7 @@ justify-content: center;
         list-style-type: none;
         
       } 
-      ul li:not(:first-child):before { content: "| " }
+      ul.softwares li:not(:first-child):before { content: "| " }
      
       li {
         display: inline-block;
@@ -133,12 +133,8 @@ justify-content: center;
         color:#473a33;
 
       }
-
-      
   </style>
   <body>
-    <!-- /* h1, h2, p, div, span, strong, em, br, hr */ -->
-
     <header class="site-header">
       <div class="site-identity">
         <h1>Tauras Koreiva</h1>
@@ -155,14 +151,11 @@ justify-content: center;
       </nav>
     </header>
     <div class="maintext">
-      <p><h3>🎮</h3></p>
-      <span class="h2">
+      <p><h3>🎮</h3></p>     
         <h2>
           Tauras Koreiva is a 3D Environment Artist living in Nottingham,
           England.
-        </h2></span>
-
-      
+        </h2>
       <hr />
       <br />
       <p>
@@ -184,7 +177,7 @@ justify-content: center;
       <p>
         <strong>Softwares Used:</strong>
         <br />
-        <ul class="softwares">
+        <ul class="softwares"><em>
         <li>3DS Max</li> 
         <li>Maya</li> 
         <li>ZBrush</li> 
@@ -192,7 +185,7 @@ justify-content: center;
         <li> Unreal Engine</li> 
         <li>Blender</li>
         <li>Substance Designer</li>
-        <li>Marmoset Toolbag</li> 
+        <li>Marmoset Toolbag</li> </em>
       </ul>
       </p>
       <p>
@@ -225,13 +218,10 @@ justify-content: center;
     </div>
     <button>Become a fan?</button>
     <br />
-    <div class ="credit"><em>Coded with love by</em
-      ><a href="https://www.linkedin.com/in/savannahstorm/"> Savannah Storm</a>.
+    <div class ="credit"><em>Coded with love by</em><a href="https://www.linkedin.com/in/savannahstorm/"> Savannah Storm</a>.
       💗</div>
   </body>
-  <script>
-    /* let, if, else, alert, prompt, event */
-  
+  <script> 
     function becomeFan() {
       let name = prompt("What is your name?");
       let age = prompt("How old are you?");
